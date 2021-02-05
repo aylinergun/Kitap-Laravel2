@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
 use App\Http\Requests;
-use App\Http\Controllers\BooksController;
+use App\Http\Controllers\BookController;
 use Illuminate\Http\Request;
 use App\Models\Book;
 
-class BooksController extends Controller
+class BookController extends Controller
 {
     /**
      * Display a listing of the resource.

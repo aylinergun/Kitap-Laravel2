@@ -32,6 +32,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'crud'])->name(
 
 
 Route::resource('books' , 'BookController');
-
-
-Route::resource('books' , 'BooksController');
