@@ -20,44 +20,18 @@ use App\Models\Book;
 |
 */
 
-//Route::get('/', function () {
-  //return view('welcome');
-//});
 
-//Route::get('/','VisitController@index')->name('visit');
+Route::get('/','HomeController@index');
 
-//Route::get('/',function(){
-  //return view('visit');
-//});
-
-Route::get('/','VisitController@index');
-
-
-//Route::get('/login',function(){
-  //return view('login');
-//});
-
-//Route::get('/register',function(){
-  //return view('register');
-//});
 
 Auth::routes();
 
-//Route::post('/login','Auth\LoginController@showLoginForm')->name('showLoginForm');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'crud'])->name('home');
+
+//Route::get('/home','HomeController@crud');
 
 
-
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('books' , 'BookController');
 
 
 Route::resource('books' , 'BooksController');
-
-//Route::get('/books' , 'BooksController@index');
-//Route::get('/books/create' , 'BooksController@create');
-//Route::post('/books/store', 'BooksController@store');
-//Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-  //return view('dashboard');
-//})->name('dashboard');
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

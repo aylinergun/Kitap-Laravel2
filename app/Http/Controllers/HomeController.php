@@ -7,16 +7,19 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function __construct()
-    {
-      $this->middleware('auth');
-
-    }
-
     public function index()
     {
 
       $books = Book::all();
-      return view('home')->with(compact('books'));
+      return view('visit')->with(compact('books'));
     }
+
+    public function crud()
+    {
+      $books = Book::all();
+      return view('home')->with(compact('books'));
+
+    }
+
+
 }
