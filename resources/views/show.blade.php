@@ -5,7 +5,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                   <div align="right">
-                    <strong><a href={{route('home')}}>Geri Dön</a></strong>
+                    <strong><a href={{route('book')}}>Geri Dön</a></strong>
                   </div>
                 </div>
 

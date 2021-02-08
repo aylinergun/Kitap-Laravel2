@@ -7,17 +7,18 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+
+    public function guestIndex()
     {
 
       $books = Book::all();
       return view('visit')->with(compact('books'));
     }
 
-    public function crud()
+    public function loggedInIndex()
     {
       $books = Book::all();
-      return view('home')->with(compact('books'));
+      return view('book')->with(compact('books'));
 
     }
 

@@ -1,10 +1,13 @@
 @extends('layouts.app')
 @section('content')
+  <div align="center"><strong>
+    <h4>HOŞGELDİNİZ</h4>
+  </strong></div>
 <div class="container">
     <div class="row">
         <div class="col-md-12 col-md-offset-0">
             <div class="panel panel-default">
-                <div align="center" class="panel-heading"><strong>ANA SAYFA</strong></div>
+          <!--      <div align="center" class="panel-heading"><strong>ANA SAYFA</strong></div> -->
 
                 <div class="panel-body">
                     @if (session('status'))

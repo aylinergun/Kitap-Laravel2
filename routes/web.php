@@ -21,14 +21,12 @@ use App\Models\Book;
 */
 
 
-Route::get('/','HomeController@index');
+Route::get('/','HomeController@guestIndex');
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'crud'])->name('home');
-
-//Route::get('/home','HomeController@crud');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'loggedInIndex'])->name('book');
 
 
 Route::resource('books' , 'BookController');
