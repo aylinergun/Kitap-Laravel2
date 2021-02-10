@@ -10,17 +10,8 @@ class HomeController extends Controller
 
     public function guestIndex()
     {
-
       $books = Book::all();
       return view('visit')->with(compact('books'));
     }
-
-    public function loggedInIndex()
-    {
-      $books = Book::all();
-      return view('book')->with(compact('books'));
-
-    }
-
 
 }

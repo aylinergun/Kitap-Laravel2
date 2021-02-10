@@ -71,7 +71,7 @@ class BookController extends Controller
 
         $book->save();
 
-        return redirect('home');
+        return redirect('/');
 
     }
 
@@ -85,7 +85,7 @@ class BookController extends Controller
     {
         $book= Book::find($id);
         if(null==$book){
-          return redirect('home');
+          return redirect('/');
         }
         else{
           return view('show', compact('book'));
@@ -102,7 +102,7 @@ class BookController extends Controller
     {
       $book= Book::find($id);
       if(null==$book){
-        return redirect('home');
+        return redirect('/');
       }
       else{
         return view('edit', compact('book'));
@@ -129,7 +129,7 @@ class BookController extends Controller
 
          $book= Book::find($id);
          if(null==$book){
-           return redirect('home');
+           return redirect('/');
          }
          else{
            $book->name = $request->name;
@@ -147,7 +147,7 @@ class BookController extends Controller
 
           $book->save();
 
-          return redirect('home');
+          return redirect('/');
 
     }
   }

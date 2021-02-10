@@ -20,13 +20,11 @@ use App\Models\Book;
 |
 */
 
-
-Route::get('/','HomeController@guestIndex');
-
+Route::get('/','HomeController@guestIndex')->name('book');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'loggedInIndex'])->name('book');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'loggedInIndex'])->name('book');
 
 
 Route::resource('books' , 'BookController');
